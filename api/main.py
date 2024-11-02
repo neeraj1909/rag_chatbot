@@ -17,6 +17,11 @@ logging.basicConfig(filename='app.log', level=logging.INFO)
 app = FastAPI()
 
 
+# @app.get("/")
+# def read_root():
+#     return {"message": "Welcome to the Langchain RAG Chatbot API!"}
+
+
 @app.post("/chat", response_model=QueryResponse)
 def chat(query_input: QueryInput):
     session_id = query_input.session_id or str(uuid.uuid4())
