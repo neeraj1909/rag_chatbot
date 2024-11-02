@@ -11,7 +11,7 @@ class ModelName(str, Enum):
 class QueryInput(BaseModel):
     question: str
     session_id: str = Field(default=None)
-    model: ModelName = Field(dafault=ModelName.GPT4_O_MINI)
+    model: ModelName = Field(default=ModelName.GPT4_O_MINI)
 
 
 class QueryResponse(BaseModel):
