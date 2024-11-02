@@ -7,7 +7,7 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from typing import List
 from langchain_core.documents import Document
-from chroma_utils import vectorstore
+from api.chroma_utils import vectorstore
 
 
 retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
